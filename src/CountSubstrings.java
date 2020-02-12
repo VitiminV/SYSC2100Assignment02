@@ -6,7 +6,6 @@ import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.util.*;
 
-
 public class CountSubstrings {
     public static void main(String[] args) throws IOException {
         System.out.println("Please enter the name of the file to be loaded: ");
@@ -21,7 +20,7 @@ public class CountSubstrings {
             patternChars.add(c);
         }
 
-        String fileName = "D:\\SYSTEM FILES\\DOCS\\COURSES\\SYSC 2100\\SYSC2100Assignment02\\" + dirString;
+        String fileName = "C:\\Users\\Jarred\\Documents\\SCHOOL\\SYSC 2100\\SYSC2100Assignment02\\" + dirString;
 
         ArrayList<Character> TextFile = readTextfile(fileName);
 
@@ -57,7 +56,6 @@ public class CountSubstrings {
                 k++;
             }
             if (k == m) { //if we get all the way through pattern and our considered string still matches.
-
                 ++result; //substring of text (text[i ... i+m-1]) is a match, so increment the result counter.
             }
         }
@@ -88,7 +86,7 @@ public class CountSubstrings {
         }
         long endTime = System.currentTimeMillis();
         long TimeTaken = endTime - startTime;
-        System.out.println("Using ArrayLists: " + result + " matches, derived in " + TimeTaken + " milliseconds.");
+        System.out.println("Using LinkedLists: " + result + " matches, derived in " + TimeTaken + " milliseconds.");
         return result;
     }
 }
